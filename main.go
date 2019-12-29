@@ -22,7 +22,6 @@ func main() {
 
 	c := GetConsumer()
 	c.SubscribeTopics([]string{"myTopic", "^aRegex.*[Tt]opic"}, nil)
-
 	for {
 		msg, err := c.ReadMessage(-1)
 		if err == nil {
